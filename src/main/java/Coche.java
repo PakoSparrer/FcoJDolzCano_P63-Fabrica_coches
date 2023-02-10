@@ -80,7 +80,7 @@ public class Coche {
         }
     }
 
-    public boolean isTechoSolar() {
+    public boolean getTechoSolar() {
         return techoSolar;
     }
 
@@ -137,9 +137,9 @@ public class Coche {
     }
 
     public void tunear() {
-        kilometros = 0.0f;
-        if (!techoSolar) {
-            setTechoSolar(true);
+        this.kilometros = 0.0f;
+        if (!this.techoSolar) {
+            this.techoSolar = true;
             JOptionPane.showMessageDialog(null, "EL cuentakilómetros se ha puesto a 0 y se ha instalado techo solar");
         } else {
             JOptionPane.showMessageDialog(null, "EL cuentakilómetros se ha puesto a 0 y no se ha instalado techo solar porque ya lleva");
@@ -148,19 +148,19 @@ public class Coche {
 
     public void tunear(String color) {
         this.color = color;
-        kilometros = 0.0f;
-        if (!techoSolar) {
-            setTechoSolar(true);
+        this.kilometros = 0.0f;
+        if (!this.techoSolar) {
+            this.techoSolar = true;
             JOptionPane.showMessageDialog(null, "EL cuentakilómetros se ha puesto a 0, se ha pintado del color indicado y se ha instalado techo solar");
         } else {
             JOptionPane.showMessageDialog(null, "EL cuentakilómetros se ha puesto a 0, se ha pintado del color indicado y no se ha instalado techo solar porque ya lleva");
         }
     }
 
-    public void matricula(String matricula) {
-        this.matricula = matricula;
+    public void matricular(String matricula) {
+        setMatricula(matricula);
         JOptionPane.showMessageDialog(null, "Se ha asignado esta matrícula " + getMatricula() + " a este coche.");
     }
 
-    
+
 }
